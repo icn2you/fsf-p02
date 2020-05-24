@@ -16,9 +16,9 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(morgan('dev'));
 }
 app.use(routes);
-// app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 // code below is to render the rss-parser podcasts page
-app.engine('handlebars', exphbs({ defaultLayout: 'main2' }));
+// app.engine('handlebars', exphbs({ defaultLayout: 'main2' }));
 app.set('view engine', 'handlebars');
 
 app.use(require('./routes/ui'));
