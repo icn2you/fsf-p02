@@ -1,6 +1,12 @@
 const $ = require('jquery');
 
 $(() => {
+  $('#podcastName').keyup(function (event) {
+    if (event.keyCode === 13) {
+      $('#addPodcast').click();
+    }
+  });
+
   $(document).on('click', '#addPodcast', function (event) {
     event.preventDefault();
 
